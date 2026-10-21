@@ -1,30 +1,54 @@
-# Courier Logistics Performance Analytics
+# LOGISENSE AI — Logistics Intelligence & Delivery Optimization System
 
-An interactive **courier and logistics analytics dashboard built with Microsoft Power BI**. The project organizes delivery data into a report for exploring delivery volume, delays, delivery cost, distance, partner ratings, and potential relationships between delivery performance and weather or vehicle type.
+An interactive **Microsoft Power BI analytics dashboard** designed to explore courier delivery performance, identify delay patterns, and understand logistics operations through data-driven visualizations.
 
-> **Project status:** Dashboard and dataset files are included in this repository. The report is still being validated and improved; results should be checked against the source data before being used for operational decisions.
+LOGISENSE AI brings delivery KPIs, vehicle comparisons, weather analysis, delivery partner performance, and cost insights into an organized, interactive reporting experience.
 
-## Project at a glance
+## Dashboard Preview
 
-- **Tool:** Microsoft Power BI Desktop
-- **Dataset:** `Dataset/Raw_Data/Delivery_Logistics.csv`
-- **Power BI report:** `PowerBI/Courier_Logistics.pbix`
-- **Repository branch:** `dev`
+### 1. Executive Overview
 
-## What the dashboard covers
+![Executive Overview Dashboard](Screenshots/logistics-dashboard.png)
 
-The report is designed to help users explore:
+Explore overall delivery performance through KPI cards, delivery delay analysis, vehicle comparisons, weather patterns, partner ratings, and delivery-time comparisons.
 
-- **Delivery KPIs:** total deliveries, delayed deliveries, delay rate, average delivery cost, and average distance.
-- **Delay analysis:** compare delivery delay patterns across the available categories.
-- **Partner performance:** explore delivery partner ratings in the report.
-- **Weather impact:** inspect delivery performance by weather condition.
-- **Vehicle comparison:** explore performance by vehicle type.
-- **Interactive filtering:** use the available Region, Vehicle Type, and Weather Condition slicers to narrow the report.
+### 2. Delay Intelligence
 
-The exact values shown in the report depend on the loaded data and the filters selected. Verify measures and filter behaviour in Power BI before presenting any figures as final findings.
+![Delay Intelligence Dashboard](Screenshots/delay-intelligence.png)
 
-## Repository structure
+Explore delivery delays by vehicle type, weather condition, delivery partner, and delivery mode, alongside delivery status, cost, distance, and delivery-time analysis.
+
+## Project Highlights
+
+- **Delivery Performance KPIs:** Total deliveries, delayed deliveries, delay rate, average delivery cost, and average distance.
+- **Delay Intelligence:** Analyze delay patterns across vehicles, weather conditions, and delivery partners.
+- **Operational Analytics:** Compare delivery modes, delivery status, delivery costs, and delivery times.
+- **Interactive Filters:** Filter report results by region, vehicle type, and weather condition on the Executive Overview page.
+- **Visual Reporting:** Use charts and KPI cards to explore operational patterns and communicate findings.
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Business Intelligence | Microsoft Power BI Desktop |
+| Data Source | CSV |
+| Data Analysis | Power Query and DAX measures |
+| Visualizations | Power BI charts, KPI cards, and slicers |
+| Version Control | Git and GitHub |
+
+## Key Performance Indicators
+
+The report includes the following measures:
+
+- **Total Deliveries** — Total records in the loaded delivery dataset.
+- **Delayed Deliveries** — Deliveries marked as delayed.
+- **Delay Rate (%)** — Delayed deliveries divided by total deliveries.
+- **Average Delivery Cost** — Average recorded delivery cost.
+- **Average Distance** — Average recorded delivery distance.
+
+Actual KPI values depend on the loaded dataset and active filters. Verify all figures in Power BI before using them as final findings.
+
+## Repository Structure
 
 ```text
 Courier-Logistics-PowerBI/
@@ -35,34 +59,41 @@ Courier-Logistics-PowerBI/
 ├── PowerBI/
 │   └── Courier_Logistics.pbix
 ├── Screenshots/
+│   ├── logistics-dashboard.png
+│   └── delay-intelligence.png
 └── README.md
 ```
 
-## Open the report
+## How to Run the Project
 
-1. Download or clone this repository.
-2. Open `PowerBI/Courier_Logistics.pbix` using **Power BI Desktop**.
-3. If Power BI asks for the CSV source location, point it to `Dataset/Raw_Data/Delivery_Logistics.csv` and apply the changes.
-4. Check the slicers and visuals, then confirm that the KPI measures match the underlying dataset.
+1. Clone or download this repository.
+2. Install and open **Microsoft Power BI Desktop**.
+3. Open `PowerBI/Courier_Logistics.pbix`.
+4. If prompted, update the data source path to `Dataset/Raw_Data/Delivery_Logistics.csv`.
+5. Apply any required Power Query changes and refresh the dataset.
+6. Check the visuals, KPI calculations, and slicer interactions.
 
-## Data and interpretation notes
+## Data and Limitations
 
-- The CSV included in this repository is the report's data file. Add the original dataset source and any applicable licence or attribution here once confirmed.
-- Treat dashboard patterns as descriptive analysis, not proof that a factor causes delivery delays.
-- No predictive model or live logistics integration is documented in this repository. Do not interpret the dashboard as a real-time monitoring or AI prediction system.
-- Before sharing final conclusions, validate data types, missing values, measure definitions, totals, and slicer interactions.
+- The project uses the CSV dataset included in the repository.
+- The original dataset source and licence should be documented once verified.
+- Dashboard relationships are exploratory and do not establish causation.
+- This repository documents a Power BI analytics dashboard; it does not establish a live logistics integration or a validated AI prediction model.
+- Validate data quality, DAX calculations, and report behaviour before drawing operational conclusions.
 
-## Planned improvements
+## Future Improvements
 
-- Add dashboard screenshots to the `Screenshots/` folder.
-- Document the data source, data dictionary, and key DAX measures in `Documentation/`.
-- Record verified findings and practical recommendations based on the actual dataset.
-- Test the report from a fresh download so its data connection works reliably.
+- Document the dataset source and data dictionary.
+- Add verified analytical findings and actionable recommendations.
+- Improve report navigation, formatting, and visual consistency.
+- Test data refresh and report functionality from a fresh repository clone.
 
 ## Author
 
 **Vikash Prajapat**
 
+**Project:** LOGISENSE AI — Logistics Intelligence & Delivery Optimization System
+
 ---
 
-Built as a Power BI analytics project focused on exploring courier delivery performance and communicating data-backed findings.
+*Built with Microsoft Power BI to explore
