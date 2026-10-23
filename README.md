@@ -2,7 +2,7 @@
 
 An interactive **Microsoft Power BI analytics dashboard** designed to explore courier delivery performance, identify delay patterns, and understand logistics operations through data-driven visualizations.
 
-LOGISENSE AI brings delivery KPIs, vehicle comparisons, weather analysis, delivery partner performance, and cost insights into an organized, interactive reporting experience.
+LOGISENSE AI brings delivery KPIs, vehicle comparisons, weather analysis, delivery partner performance, regional comparisons, and cost insights into an organized, interactive reporting experience.
 
 ## Dashboard Preview
 
@@ -18,11 +18,24 @@ Explore overall delivery performance through KPI cards, delivery delay analysis,
 
 Explore delivery delays by vehicle type, weather condition, delivery partner, and delivery mode, alongside delivery status, cost, distance, and delivery-time analysis.
 
+### 3. Cost & Efficiency
+
+![Cost and Efficiency Dashboard](Screenshots/cost-efficiency.png.png)
+
+Analyze delivery costs and operational efficiency through cost-related KPIs and comparative visualizations.
+
+### 4. Regional Performance
+
+![Regional Performance Dashboard](Screenshots/regional-performance.png.png)
+
+Compare delivery performance across regions using total deliveries, delayed deliveries, average delivery ratings, and regional summary visuals.
+
 ## Project Highlights
 
 - **Delivery Performance KPIs:** Total deliveries, delayed deliveries, delay rate, average delivery cost, and average distance.
 - **Delay Intelligence:** Analyze delay patterns across vehicles, weather conditions, and delivery partners.
-- **Operational Analytics:** Compare delivery modes, delivery status, delivery costs, and delivery times.
+- **Cost & Efficiency:** Explore delivery costs and operational efficiency.
+- **Regional Analytics:** Compare delivery volume, delays, and ratings across regions.
 - **Interactive Filters:** Filter report results by region, vehicle type, and weather condition on the Executive Overview page.
 - **Visual Reporting:** Use charts and KPI cards to explore operational patterns and communicate findings.
 
@@ -60,7 +73,9 @@ Courier-Logistics-PowerBI/
 │   └── Courier_Logistics.pbix
 ├── Screenshots/
 │   ├── logistics-dashboard.png
-│   └── delay-intelligence.png
+│   ├── delay-intelligence.png
+│   ├── cost-efficiency.png.png
+│   └── regional-performance.png.png
 └── README.md
 ```
 
@@ -96,4 +111,4 @@ Courier-Logistics-PowerBI/
 
 ---
 
-*Built with Microsoft Power BI to explore
+*Built with Microsoft Power BI to explore delivery performance, logistics efficiency, delay patterns, and regional operational insights.*
