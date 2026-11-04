@@ -1,0 +1,160 @@
+# PROJECT DOCUMENTATION: ENTERPRISE SUPPLY CHAIN & LOGISTICS OPTIMIZATION
+
+**Prepared by:** Vikash Prajapat  
+**Project Domain:** Supply Chain Analytics | Logistics Optimization | Business Intelligence  
+**Technology:** Power BI | DAX | Power Query | Excel
+
+---
+
+## 1. PROJECT OBJECTIVE & PROBLEM STATEMENT
+
+The objective of this project is to develop an end-to-end Executive Supply Chain Analytics Platform for analyzing and optimizing supply chain and logistics operations.
+
+The platform focuses on identifying delivery bottlenecks, monitoring shipping costs, analyzing product damage and returns, and evaluating warehouse inventory health to support better operational decision-making.
+
+The dashboard helps management answer critical business questions across three major analytical areas:
+
+**Page 1: Executive Financials & Shipping Cost Trends**
+- Revenue and net profit performance.
+- Shipping cost analysis.
+- Profit margin monitoring.
+- Financial performance across categories and regions.
+
+**Page 2: Logistics Carrier SLAs, Delays & Root-Cause Analysis**
+- On-time delivery performance.
+- Logistics carrier performance.
+- Delivery delay analysis.
+- Identification of major delay reasons.
+- Product damage and return monitoring.
+
+**Page 3: Warehouse Capacity, Inventory Risks & Supplier Reliability**
+- Warehouse inventory monitoring.
+- Inventory versus safety stock analysis.
+- Identification of stock-out risks.
+- Supplier reliability evaluation.
+- Inventory health and operational risk assessment.
+
+The ultimate goal is to transform raw supply chain data into meaningful business insights through interactive Power BI dashboards.
+
+---
+
+## 2. KEY PERFORMANCE INDICATORS (KPIs) & BUSINESS LOGIC
+
+The dashboard uses DAX measures to calculate important business performance indicators.
+
+### 1. On-Time Delivery (OTD %)
+
+**Formula:**
+
+`OTD % = (Total On-Time Orders / Total Orders) × 100`
+
+**Target Benchmark:** 85% or higher.
+
+Purpose:
+Measures the percentage of orders delivered within their expected delivery timelines.
+
+### 2. Net Profit
+
+**Formula:**
+
+`Net Profit = Revenue - (Item Cost + Shipping Cost)`
+
+Purpose:
+Measures the actual profit generated after accounting for item and shipping costs.
+
+### 3. Net Profit Margin %
+
+**Formula:**
+
+`Net Profit Margin % = (Total Net Profit / Total Item Revenue) × 100`
+
+Purpose:
+Evaluates how efficiently the business converts revenue into profit.
+
+### 4. Product Damage Rate %
+
+**Formula:**
+
+`Product Damage Rate % = (Count of Damaged Items / Total Orders Received) × 100`
+
+Purpose:
+Monitors product damage during transportation and delivery.
+
+### 5. Order Return Rate %
+
+**Formula:**
+
+`Order Return Rate % = (Count of Returned Items / Total Orders Received) × 100`
+
+Purpose:
+Measures the percentage of received orders that are returned.
+
+**Note:** KPI calculations must use the correct dataset grain. If the dataset contains multiple items per order, item-level and order-level measures should be calculated separately.
+
+---
+
+## 3. DATA DICTIONARY (CRITICAL METRICS EXPLAINED)
+
+The dataset contains operational and transactional attributes used for supply chain performance analysis.
+
+The following fields describe important business metrics:
+
+| Attribute | Description |
+|---|---|
+| OrderID | Unique identifier assigned to each customer order. |
+| IsDelayed (Yes/No) | Identifies whether actual delivery exceeded the expected delivery time. |
+| DelayReason | Records the primary reason for delivery delays, such as severe weather, customs delay, or traffic. |
+| IsDamaged (Yes/No) | Indicates whether a product was damaged during transportation. |
+| ReturnStatus (Returned/None) | Tracks product return information for reverse logistics analysis. |
+| WarehouseInventoryLevel | Represents the available inventory units at a warehouse. |
+| SafetyStockLevel | Minimum inventory threshold required to reduce the risk of stock-outs. |
+| SupplierReliabilityScore | Represents the supplier's reliability score, measured on a scale from 0 to 1. |
+
+### Important Business Logic
+
+- **Delivery Delay:** An order is considered delayed when its actual delivery time exceeds its expected delivery time.
+- **Inventory Risk:** If warehouse inventory falls below the safety stock level, the warehouse is flagged for inventory risk.
+- **Supplier Reliability:** Supplier reliability scores help compare supplier performance.
+- **Product Damage:** Damage records help identify transportation and handling quality issues.
+- **Product Returns:** Return records help monitor reverse logistics performance.
+
+---
+
+## 4. ARCHITECTURE & TARGET AUDIENCE
+
+### Data Model Architecture
+
+The project follows a Star Schema data modeling approach to organize supply chain information and support efficient reporting.
+
+**Data Model Structure:**
+- One Fact Table containing transactional information.
+- Dimension Tables containing descriptive business information.
+- Relationships connecting transactional records with relevant dimensions.
+
+### Data Scale
+
+- Transactional order records from the supply chain dataset.
+- Multiple operational attributes.
+- Financial, delivery, inventory, and supplier-related information.
+
+### Target Audience
+
+The dashboard is designed for business professionals and decision-makers, including:
+
+- Chief Operations Officer (COO).
+- Logistics Directors.
+- Supply Chain Managers.
+- Regional Warehouse Managers.
+- Inventory Planning Teams.
+- Business Intelligence Analysts.
+
+### Business Value
+
+This project demonstrates how Power BI can transform operational data into actionable insights by combining data modeling, DAX calculations, interactive visualizations, and business performance monitoring.
+
+---
+
+**Project Author:** Vikash Prajapat  
+**GitHub:** https://github.com/Vikashprajapat959  
+**Project:** Enterprise Supply Chain & Logistics Optimization Platform
+

@@ -1,114 +1,344 @@
-# LOGISENSE AI — Logistics Intelligence & Delivery Optimization System
+# Enterprise Supply Chain & Logistics Optimization Platform
 
-An interactive **Microsoft Power BI analytics dashboard** designed to explore courier delivery performance, identify delay patterns, and understand logistics operations through data-driven visualizations.
+<p align="center">
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/DAX-Data_Analysis_Expressions-blue?style=for-the-badge" alt="DAX" />
+  <img src="https://img.shields.io/badge/Data_Modeling-Star_Schema-orange?style=for-the-badge" alt="Data Modeling" />
+  <img src="https://img.shields.io/badge/Git-Workflow-critical?style=for-the-badge&logo=git" alt="Git" />
+</p>
 
-LOGISENSE AI brings delivery KPIs, vehicle comparisons, weather analysis, delivery partner performance, regional comparisons, and cost insights into an organized, interactive reporting experience.
+## Project Overview
 
-## Dashboard Preview
+Enterprise Supply Chain Logistics Analysis is an end-to-end Power BI analytics solution designed to monitor and optimize supply chain operations through interactive dashboards and business intelligence reporting.
 
-### 1. Executive Overview
+The project focuses on delivery performance, inventory risk monitoring, supplier quality assessment, operational efficiency, and order-level analysis. The dashboard provides actionable insights that support data-driven decision-making across logistics and supply chain functions.
 
-![Executive Overview Dashboard](Screenshots/logistics-dashboard.png)
+The solution combines data preparation, data transformation, data modeling, DAX calculations, and interactive visualizations to convert raw operational data into meaningful business insights.
 
-Explore overall delivery performance through KPI cards, delivery delay analysis, vehicle comparisons, weather patterns, partner ratings, and delivery-time comparisons.
+---
 
-### 2. Delay Intelligence
+## Business Objective
 
-![Delay Intelligence Dashboard](Screenshots/delay-intelligence.png)
+Supply chain organizations face challenges related to:
 
-Explore delivery delays by vehicle type, weather condition, delivery partner, and delivery mode, alongside delivery status, cost, distance, and delivery-time analysis.
+- Delivery delays
+- Inventory shortages
+- Product damages
+- Supplier performance monitoring
+- Logistics efficiency
+- Operational visibility
 
-### 3. Cost & Efficiency
+The objective of this project is to develop an interactive Power BI dashboard that enables stakeholders to identify operational bottlenecks, monitor key performance indicators, and improve supply chain performance.
 
-![Cost and Efficiency Dashboard](Screenshots/cost-efficiency.png.png)
+---
 
-Analyze delivery costs and operational efficiency through cost-related KPIs and comparative visualizations.
+## Dataset Information
 
-### 4. Regional Performance
+The project uses an enterprise supply chain dataset containing operational, inventory, warehouse, supplier, and logistics information.
 
-![Regional Performance Dashboard](Screenshots/regional-performance.png.png)
+### Dataset Characteristics
 
-Compare delivery performance across regions using total deliveries, delayed deliveries, average delivery ratings, and regional summary visuals.
+- One Year of Operational Data
+- Order-Level Transaction Records
+- Multiple Warehouses
+- Multiple Suppliers
+- Multiple Delivery Partners
+- Multiple Product Categories
+- Revenue and Profit Metrics
+- Inventory Monitoring Metrics
+- Delivery Performance Metrics
 
-## Project Highlights
+**Dataset File:** `Enterprise_Supply_Chain_Master.csv`
 
-- **Delivery Performance KPIs:** Total deliveries, delayed deliveries, delay rate, average delivery cost, and average distance.
-- **Delay Intelligence:** Analyze delay patterns across vehicles, weather conditions, and delivery partners.
-- **Cost & Efficiency:** Explore delivery costs and operational efficiency.
-- **Regional Analytics:** Compare delivery volume, delays, and ratings across regions.
-- **Interactive Filters:** Filter report results by region, vehicle type, and weather condition on the Executive Overview page.
-- **Visual Reporting:** Use charts and KPI cards to explore operational patterns and communicate findings.
+**Dataset Location:** `Dataset/Raw_Data/Enterprise_Supply_Chain_Master.csv`
 
-## Technology Stack
+*Note: Exact record counts and numerical dataset characteristics should be updated according to the final dataset used in this repository.*
 
-| Component | Technology |
-|---|---|
-| Business Intelligence | Microsoft Power BI Desktop |
-| Data Source | CSV |
-| Data Analysis | Power Query and DAX measures |
-| Visualizations | Power BI charts, KPI cards, and slicers |
-| Version Control | Git and GitHub |
+---
+
+## Data Model
+
+### Fact Table
+
+- Fact_Orders
+
+### Dimension Tables
+
+- Dim_Product
+- Dim_Customer
+- Dim_Supplier
+- Dim_Warehouse
+- Dim_Partner
+
+The data model follows a star schema approach for efficient reporting and analytical performance.
+
+The fact table stores transactional information, while dimension tables provide descriptive information for filtering, grouping, and analyzing business performance.
+
+---
+
+## Dashboard Pages
+
+### Page 1: Home
+
+Executive landing page providing an overall snapshot of supply chain performance.
+
+#### KPIs
+
+- Total Orders
+- Total Revenue
+- Delayed Orders
+- Inventory Risk Orders
+- Damage Orders
+
+#### Insights
+
+- High Delay Rate
+- Revenue Contribution
+- Top Revenue Category
+- Inventory Risk Status
+
+---
+
+### Page 2: Executive Performance Overview
+
+Provides high-level operational and financial performance analysis.
+
+#### Visualizations
+
+- Revenue by Category
+- Delay Reason Analysis
+- Revenue and Profit by Region
+- Damage Percentage by Supplier
+
+#### KPIs
+
+- Total Revenue
+- Net Profit
+- Total Orders
+- Delay Percentage
+- Average Delivery Rating
+
+---
+
+### Page 3: Delivery Performance
+
+Focused on delivery efficiency and delay investigation.
+
+#### Visualizations
+
+- Delay Performance Heatmap
+- Delay Reason Analysis
+- Delay Percentage by Weather Condition
+- Delivery Partner Analysis
+
+#### KPIs
+
+- On-Time Delivery Percentage
+- Delayed Orders
+- Average Delivery Time
+- Damage Percentage
+- Average Delivery Rating
+
+---
+
+### Page 4: Inventory Risk
+
+Monitors inventory health and stock exposure.
+
+#### Visualizations
+
+- Inventory Risk Heatmap
+- Inventory versus Safety Stock
+- At Risk Inventory by Category
+
+#### KPIs
+
+- Total Inventory
+- Safety Stock
+- At Risk Orders
+- Inventory Risk Percentage
+- Inventory Buffer
+
+---
+
+### Page 5: Order Details
+
+Operational drill-through page for detailed order-level analysis.
+
+#### Features
+
+- Order Tracking
+- Delivery Status Monitoring
+- Revenue Tracking
+- Profit Tracking
+- Inventory Risk Monitoring
+- Damage Monitoring
+
+---
 
 ## Key Performance Indicators
 
-The report includes the following measures:
+| KPI | Description |
+|---|---|
+| Total Revenue | Total revenue generated from orders |
+| Net Profit | Overall profitability |
+| Total Orders | Number of processed orders |
+| Delay Percentage | Percentage of delayed orders |
+| On-Time Delivery Percentage | Orders delivered on schedule |
+| Average Delivery Rating | Customer delivery satisfaction |
+| Damage Percentage | Percentage of damaged orders |
+| Inventory Risk Percentage | Inventory below safety stock |
+| Inventory Buffer | Available inventory above safety threshold |
 
-- **Total Deliveries** — Total records in the loaded delivery dataset.
-- **Delayed Deliveries** — Deliveries marked as delayed.
-- **Delay Rate (%)** — Delayed deliveries divided by total deliveries.
-- **Average Delivery Cost** — Average recorded delivery cost.
-- **Average Distance** — Average recorded delivery distance.
+---
 
-Actual KPI values depend on the loaded dataset and active filters. Verify all figures in Power BI before using them as final findings.
+## Key Business Insights
+
+### Delivery Performance
+
+- Delivery delays can be analyzed to identify operational bottlenecks.
+- Delay Reason Analysis helps identify major contributors to delayed deliveries.
+- Weather conditions and delivery partner performance can be compared to understand delivery efficiency.
+
+### Revenue Performance
+
+- Revenue contribution can be compared across product categories.
+- Regional revenue analysis helps identify high-performing business regions.
+- Profitability can be evaluated across different regions and product categories.
+
+### Inventory Risk
+
+- Inventory levels can be compared against safety stock requirements.
+- Product categories with higher inventory exposure can be identified.
+- Inventory Buffer helps monitor available stock above the safety threshold.
+
+### Supplier Quality
+
+- Damage rates can be compared across suppliers.
+- Supplier-level monitoring can help identify quality-related issues.
+- Performance analysis can support better supplier evaluation and operational decisions.
+
+*Business insights and numerical conclusions should be finalized using the actual results generated from the Power BI report.*
+
+---
+
+## Tools and Technologies
+
+- Power BI Desktop
+- Power Query
+- DAX
+- Data Modeling
+- Microsoft Excel
+- CSV Dataset
+- Data Visualization
+- Business Intelligence Reporting
+- Git and GitHub
+
+---
 
 ## Repository Structure
 
 ```text
 Courier-Logistics-PowerBI/
+│
 ├── Dataset/
 │   └── Raw_Data/
-│       └── Delivery_Logistics.csv
+│       └── Enterprise_Supply_Chain_Master.csv
+│
 ├── Documentation/
+│   └── Business_Requirements_&_Data_Dictionary.txt
+│
 ├── PowerBI/
 │   └── Courier_Logistics.pbix
-├── Screenshots/
-│   ├── logistics-dashboard.png
-│   ├── delay-intelligence.png
-│   ├── cost-efficiency.png.png
-│   └── regional-performance.png.png
+│
+├── assets/
+│   ├── home_page.png
+│   ├── executive_overview.png
+│   ├── delivery_performance.png
+│   ├── inventory_risk.png
+│   └── order_details.png
+│
 └── README.md
 ```
 
-## How to Run the Project
+---
 
-1. Clone or download this repository.
-2. Install and open **Microsoft Power BI Desktop**.
-3. Open `PowerBI/Courier_Logistics.pbix`.
-4. If prompted, update the data source path to `Dataset/Raw_Data/Delivery_Logistics.csv`.
-5. Apply any required Power Query changes and refresh the dataset.
-6. Check the visuals, KPI calculations, and slicer interactions.
+## Dashboard Screenshots
 
-## Data and Limitations
+### Home Page
 
-- The project uses the CSV dataset included in the repository.
-- The original dataset source and licence should be documented once verified.
-- Dashboard relationships are exploratory and do not establish causation.
-- This repository documents a Power BI analytics dashboard; it does not establish a live logistics integration or a validated AI prediction model.
-- Validate data quality, DAX calculations, and report behaviour before drawing operational conclusions.
+![Home Page](assets/home_page.png)
 
-## Future Improvements
+### Executive Performance Overview
 
-- Document the dataset source and data dictionary.
-- Add verified analytical findings and actionable recommendations.
-- Improve report navigation, formatting, and visual consistency.
-- Test data refresh and report functionality from a fresh repository clone.
+![Executive Performance Overview](assets/executive_overview.png)
 
-## Author
+### Delivery Performance
 
-**Vikash Prajapat**
+![Delivery Performance](assets/delivery_performance.png)
 
-**Project:** LOGISENSE AI — Logistics Intelligence & Delivery Optimization System
+### Inventory Risk
+
+![Inventory Risk](assets/inventory_risk.png)
+
+### Order Details
+
+![Order Details](assets/order_details.png)
 
 ---
 
-*Built with Microsoft Power BI to explore delivery performance, logistics efficiency, delay patterns, and regional operational insights.*
+## How To Use
+
+1. Download or clone the repository.
+2. Open the `PowerBI` folder.
+3. Open `Courier_Logistics.pbix` using Microsoft Power BI Desktop.
+4. If required, update the dataset source path in Power Query.
+5. Refresh the dataset to load the latest data.
+6. Interact with filters and slicers to explore operational insights.
+7. Navigate across dashboard pages using the built-in navigation menu.
+
+---
+
+## Project Highlights
+
+✔ End-to-End Supply Chain Analytics
+
+✔ Executive-Level KPI Monitoring
+
+✔ Delivery Performance Investigation
+
+✔ Inventory Risk Assessment
+
+✔ Supplier Quality Analysis
+
+✔ Interactive Power BI Dashboard
+
+✔ Star Schema Data Modeling
+
+✔ DAX-Based KPI Development
+
+✔ Power Query Data Transformation
+
+✔ Business-Focused Data Visualization
+
+---
+
+## Author
+
+### Vikash Prajapat
+
+Computer Science & Engineering (Data Science)
+
+GitHub: [Vikashprajapat959](https://github.com/Vikashprajapat959)
+
+---
+
+## Project Attribution
+
+This repository contains adaptations and independent modifications to an existing supply chain analytics project. Original contributions and reused materials should retain appropriate credit in accordance with their applicable license.
+
+---
+
+## License
+
+This project is intended for educational, portfolio, and demonstration purposes. Reused materials remain subject to their original license and applicable permissions.
